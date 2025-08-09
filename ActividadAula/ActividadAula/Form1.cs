@@ -21,7 +21,14 @@ namespace ActividadAula
         private void btnGenerarJson_Click(object sender, EventArgs e)
         {
             Ortoedro objetoOrtoedro = new Ortoedro(7, 7, 21);
-            txtListar.Text += objetoOrtoedro.Describir();
+            Cubo objetoCubo = new Cubo(3);
+            txtListar.Text =
+    "[" +
+    objetoOrtoedro.Describir() + "," +
+    objetoCubo.Descripcion() +
+    "]";
+
+
         }
     }
 }

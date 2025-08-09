@@ -53,6 +53,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Cuadrado.cs" />
+    <Compile Include="Models\Cubo.cs" />
     <Compile Include="Models\Ortoedro.cs" />
     <Compile Include="Models\Rectangulo.cs" />
     <Compile Include="Program.cs" />
