@@ -42,10 +42,7 @@ $@"
 {Tapas[0].Descripcion()}, 
 {Tapas[1].Descripcion()}
 ],
-""Lado"": 
-[
-{Lado.Describir()}
-],
+""Lado"": {Lado.Describir()},
 ""Area"": {CalcularArea().ToString("0.00", CultureInfo.InvariantCulture)},
 ""Volumen"": {CalcularVolumen().ToString("0.00", CultureInfo.InvariantCulture)}
 }}";
