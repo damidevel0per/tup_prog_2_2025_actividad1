@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace ActividadAula.Models
 {
@@ -36,17 +37,25 @@ namespace ActividadAula.Models
 
         public string Describir()
         {
-            string descripcion = 
-                $@"{{  
-                        ""Tipo"": ""Ortoedro"", 
-                        ""Tapas"": 
-                        [
-                            {Bases[0].Describir()}, 
-                            {Bases[1].Describir()}
-                        ],
-                        ""Area"": {CalcularArea()},
-                        ""Volumen"": {CalcularVolumen()}
-                   }}";
+            string descripcion =
+$@"
+{{  
+""Tipo"": ""Ortoedro"", 
+""Bases"": 
+[
+{Bases[0].Describir()}, 
+{Bases[1].Describir()}
+], 
+""Laterales"": 
+[
+{Laterales[0].Describir()},
+{Laterales[1].Describir()},
+{Laterales[2].Describir()},
+{Laterales[3].Describir()}
+],
+""Area"": {CalcularArea().ToString("0.00", CultureInfo.InvariantCulture)},
+""Volumen"": {CalcularVolumen().ToString("0.00", CultureInfo.InvariantCulture)}
+}}";
 
             return descripcion;
         }

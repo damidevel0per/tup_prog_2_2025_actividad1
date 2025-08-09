@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -25,13 +26,14 @@ namespace ActividadAula.Models
 
         public string Describir()
         {
-            return $@"
-                            {{ 
-                                ""Tipo"": ""Rectangulo"", 
-                                ""Largo"": {Largo}, 
-                                ""Ancho"": {Ancho}, 
-                                ""Area"": {CalcularArea()}
-                            }}";
+            return 
+$@"
+{{ 
+""Tipo"": ""Rectangulo"", 
+""Largo"": {Largo.ToString("0.00", CultureInfo.InvariantCulture)}, 
+""Ancho"": {Ancho.ToString("0.00", CultureInfo.InvariantCulture)}, 
+""Area"": {CalcularArea().ToString("0.00", CultureInfo.InvariantCulture)}
+}}";
         }
     }
 }
