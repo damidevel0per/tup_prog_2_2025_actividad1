@@ -22,10 +22,13 @@ namespace ActividadAula
         {
             Ortoedro objetoOrtoedro = new Ortoedro(7, 7, 21);
             Cubo objetoCubo = new Cubo(3);
+            Cilindro objetoCilindro = new Cilindro(3, 3);
             txtListar.Text =
     "[" +
     objetoOrtoedro.Describir() + "," +
-    objetoCubo.Descripcion() +
+    objetoCubo.Describir() + "," +
+    objetoCilindro.Describir() +
+
     "]";
 
 

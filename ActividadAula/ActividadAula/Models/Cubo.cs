@@ -31,7 +31,7 @@ namespace ActividadAula.Models
             return Caras[0].Ancho * Caras[0].Ancho * Caras[0].Ancho;
         }
 
-        public string Descripcion()
+        public string Describir()
         {
             string descripcion =
 $@"

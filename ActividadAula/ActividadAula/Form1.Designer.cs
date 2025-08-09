@@ -37,12 +37,12 @@
             this.txtListar.Location = new System.Drawing.Point(12, 12);
             this.txtListar.Multiline = true;
             this.txtListar.Name = "txtListar";
-            this.txtListar.Size = new System.Drawing.Size(776, 325);
+            this.txtListar.Size = new System.Drawing.Size(776, 448);
             this.txtListar.TabIndex = 0;
             // 
             // btnGenerarJson
             // 
-            this.btnGenerarJson.Location = new System.Drawing.Point(279, 374);
+            this.btnGenerarJson.Location = new System.Drawing.Point(288, 466);
             this.btnGenerarJson.Name = "btnGenerarJson";
             this.btnGenerarJson.Size = new System.Drawing.Size(232, 46);
             this.btnGenerarJson.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 524);
             this.Controls.Add(this.btnGenerarJson);
             this.Controls.Add(this.txtListar);
             this.Name = "Form1";
