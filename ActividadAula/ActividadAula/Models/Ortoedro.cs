@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ActividadAula.Models
@@ -35,7 +36,19 @@ namespace ActividadAula.Models
 
         public string Describir()
         {
-            return "Esto es un rectangulo de area " + CalcularArea() + " y volumen " + CalcularVolumen();
+            string descripcion = 
+                $@"{{  
+                        ""Tipo"": ""Ortoedro"", 
+                        ""Tapas"": 
+                        [
+                            {Bases[0].Describir()}, 
+                            {Bases[1].Describir()}
+                        ],
+                        ""Area"": {CalcularArea()},
+                        ""Volumen"": {CalcularVolumen()}
+                   }}";
+
+            return descripcion;
         }
     }
 }

@@ -22,7 +22,11 @@ namespace ActividadAula
         {
             Ortoedro objetoOrtoedro = new Ortoedro(7, 7, 21);
 
-            txtListar.Text = "Ortoedro de area: " + objetoOrtoedro.CalcularArea()  + " y volumen: " + objetoOrtoedro.CalcularVolumen();
+            txtListar.Text += $@"
+            [ 
+                {objetoOrtoedro.Describir()},
+            ]";
+
         }
     }
 }

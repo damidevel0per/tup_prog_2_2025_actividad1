@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ActividadAula.Models
@@ -24,7 +25,13 @@ namespace ActividadAula.Models
 
         public string Describir()
         {
-            return "Es un rectangulo";
+            return $@"
+                            {{ 
+                                ""Tipo"": ""Rectangulo"", 
+                                ""Largo"": {Largo}, 
+                                ""Ancho"": {Ancho}, 
+                                ""Area"": {CalcularArea()}
+                            }}";
         }
     }
 }
